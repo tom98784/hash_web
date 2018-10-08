@@ -1,0 +1,10 @@
+This is a list of packs
+{% if packs_list %}
+    <ul>
+    {% for pack in packs_list %}
+        <li><a href="{% url 'hash_diary:pack_detail' pack.id %}">{{ pack }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No packs are available.</p>
+{% endif %}

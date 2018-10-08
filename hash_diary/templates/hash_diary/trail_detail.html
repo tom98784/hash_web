@@ -1,0 +1,10 @@
+{% extends 'hash_diary/base.html' %}
+{% block title %}Home{% endblock title %}
+{% block nav-style %}mkt-nav{% endblock nav-style %}
+
+{% block content %}  
+
+{{ trail }}
+<li><a href="{% url 'hash_diary:pack_detail' trail.pack.id %}">{{ trail.pack }}</a></li>
+
+{% endblock content %}
